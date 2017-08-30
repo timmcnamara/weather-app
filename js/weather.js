@@ -36,19 +36,29 @@
   let getWeatherButton = cityForm.querySelector('.get-weather-button');
   let cityWeather = app.querySelector('.city-weather');
   let cityTime = app.querySelector('.city-time');
-  let button = app.querySelector('.text')
+
 
   cityForm.addEventListener('submit', function(event) {
       event.preventDefault(); // prevent the form from submitting
 
       let city = cityInput.value;
-
       cityInput.value = '';
 
       getCoordinatesForCity(city)
       .then(getCurrentWeather)
       .then((location) => {
-        cityWeather.innerText = `It's currently ` + Math.floor(location.temperature) + ` degrees in ` + city + ` & the time is  ${moment.tz(location.time * 1000, location.timezone).format('h:mm a')}`;
+        let temp = Math.floor(location.temperature)
+        cityWeather.innerText = `It's currently ` + temp + ` degrees in ` + city + ` & the time is  ${moment.tz(location.time * 1000, location.timezone).format('h:mm a')}`;
+        app.style.background = '#f4f4f4';
+        // if (temp < -10) {
+        //   // set icon
+        //   // set background
+        //
+        //
+        // } else if (temp < 0) {
+        //   app.style.background = 'red';
+        // }
+
       })
       .catch( err => {
         if (!navigator.onLine) {
