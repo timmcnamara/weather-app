@@ -1,0 +1,22 @@
+dark sky: 8798e32504aae0bd572907191ae2cf80
+google maps: AIzaSyClouq_njwRSV2FqryE4kBYKG1-Qfyqc-4
+
+flicker: 66227dc70afe67507867b886f236c2ed
+
+
+ideas to make it awesoem..
+
+automatic typing into the placeholder file.
+
+make the input a line.
+
+
+animate.css fade in the text.
+
+favicon
+
+http://darkskyapp.github.io/skycons/
+
+Icons / colour of screen
+
+loading button
