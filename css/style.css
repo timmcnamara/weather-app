@@ -18,8 +18,14 @@ body {
   flex: 1;
   position: relative;
   align-items: center;
+  transition: background-color 0.8s ease;
   background-color: white;
 }
+
+/*.background {
+  transition: background-color 0.8s ease;
+  background-color: red;
+}*/
 
 
 h1 {
@@ -76,6 +82,11 @@ button {
     font-size: 1.25rem;
     border-radius: 5px;
     margin-top: 15px;
+}
+
+button:hover {
+  transition: background-color 0.5s ease;
+  background-color: red
 }
 
 .text {

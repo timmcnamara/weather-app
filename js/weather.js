@@ -49,16 +49,18 @@
       .then((location) => {
         let temp = Math.floor(location.temperature)
         cityWeather.innerText = `It's currently ` + temp + ` degrees in ` + city + ` & the time is  ${moment.tz(location.time * 1000, location.timezone).format('h:mm a')}`;
-        app.style.background = '#f4f4f4';
-        // if (temp < -10) {
-        //   // set icon
-        //   // set background
-        //
-        //
-        // } else if (temp < 0) {
-        //   app.style.background = 'red';
-        // }
-
+        console.log(temp)
+        if (temp > 30) {
+          app.style.background = '#ff8259';
+        } else if (temp > 20) {
+          app.style.background = '#ffdd59';
+        } else if (temp > 10) {
+          app.style.background = '#8effbb';
+        } else if (temp > 0) {
+          app.style.background = '#bdefe8';
+        } else {
+          app.style.background = '#dae3f2'
+        }
       })
       .catch( err => {
         if (!navigator.onLine) {
