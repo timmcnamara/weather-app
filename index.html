@@ -4,9 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0">
     <title>Time & Temp</title>
-    <link rel='stylesheet' href='animate.css' type='text/css'>
     <link rel='stylesheet' href='./css/style.css' type='text/css'>
+    <link rel="shortcut icon" type="image/png" href="images/flavicon.png"/>
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
+
   </head>
   <body>
       <div id="app" class="background"> <!-- everything happens inside app-->
@@ -14,15 +15,19 @@
 
         <div>
           <form class="city-form">
-            <input type="text" placeholder="Search any city" class="city-input" id="searchTextField">
+            <input type="text" placeholder="Search Worldwide..." class="city-input" id="searchTextField">
             <button type="submit" class="get-weather-button">Get the Time and Temperature!</button>
           </form>
         </div>
-          <div class="city-weather text"></div>
+        <div class="result">
+          <div class="vector"></div>
+          <div class="city-weather text"></div>    
+        </div>
       </div>
 
+
     <footer>
-        <p>Project by <a href="http://timmcnamara.com/">Tim McNamara</a></p>
+        <p>Project by <a class="footer-link" target="_blank" href="http://timmcnamara.com">Tim McNamara</a></p>
     </footer>
 
     <script src="./js/moment.js"></script>

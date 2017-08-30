@@ -31,25 +31,35 @@ body {
 h1 {
   font-family: 'Oswald', sans-serif;
   font-size: 5rem;
+  color: #051838;
   padding: 3%;
   margin: 0;
 }
 
 p {
   font-family: 'Open Sans', sans-serif;
+  color: #051838;
   padding: 1rem;
   margin: 0;
   text-align: right;
 }
 
 footer {
-  background: #e1e1e1;
+  background: #051838;
+  color: white;
   position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
 }
 
+footer p {
+  color: white;
+}
+
+.footer-link {
+  color: #eaeaea;
+}
 .city-form {
     display: flex;
     flex-flow: column;
@@ -58,11 +68,12 @@ footer {
 }
 
 input[type=text]  {
+  width: 100%;
   text-align: center;
   padding: 10px;
   border: none;
   margin-bottom: 6%;
-  font-size: 2rem;
+  font-size: 1.5rem;
   border-bottom: solid 2px #c9c9c9;
   transition: border 0.3s;
 }
@@ -72,7 +83,7 @@ input[type=text]:focus {
 }
 
 button {
-    background-color: #839CA5;
+    background-color: #2D4671;
     font-family: 'Open Sans', sans-serif;
     border: none;
     color: white;
@@ -86,13 +97,12 @@ button {
 
 button:hover {
   transition: background-color 0.5s ease;
-  background-color: red
+  background-color: #4D658D;
 }
 
 .text {
   font-family: 'Open Sans', sans-serif;
   font-size: 1.25rem;
-  margin-top: 5%;
   padding: 5%;
 }
 
@@ -140,13 +150,26 @@ button:hover {
 
 
 .pac-item-query {
-  font-size: 1.1rem;
+ font-size: 1.1rem;
  color: blue;
  padding: 5% 2% 10% 10%;
 }
 
 .pac-logo {
   color: orange;
+}
+
+.result {
+  display: flex;
+  flex-direction: row;
+}
+
+.background-vector {
+  transition: background-color 0.5s ease;
+  background-color: #2D4671;
+  padding: 10%;
+  border-radius: 10%;
+  opacity: 0.5;
 }
 
 @media only screen and (max-width: 600px){

@@ -21,4 +21,10 @@ Icons / colour of screen
 
 loading button
 
-reset button to reset form. 
+reset button to reset form.
+
+
+https://www.npmjs.com/package/weather-icons
+
+flavicon
+#333333

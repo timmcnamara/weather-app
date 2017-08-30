@@ -36,6 +36,7 @@
   let getWeatherButton = cityForm.querySelector('.get-weather-button');
   let cityWeather = app.querySelector('.city-weather');
   let cityTime = app.querySelector('.city-time');
+  let vector = app.querySelector('.vector');
 
 
   cityForm.addEventListener('submit', function(event) {
@@ -47,19 +48,27 @@
       getCoordinatesForCity(city)
       .then(getCurrentWeather)
       .then((location) => {
-        let temp = Math.floor(location.temperature)
-        cityWeather.innerText = `It's currently ` + temp + ` degrees in ` + city + ` & the time is  ${moment.tz(location.time * 1000, location.timezone).format('h:mm a')}`;
+        let temp = Math.floor(location.temperature);
+        let time = moment.tz(location.time * 1000, location.timezone).format('h:mm a');
+        let degree = "degrees";
+        let colors = ['#c4d3ed','#b1c8ef', '#a4c4f9', '#9bc0ff'];
+        if (temp === 1) {
+          degree = "degree";
+        }
+        cityWeather.innerText = `It's currently ${temp} ${degree} in ${city} & the time is ${time}`;
         console.log(temp)
-        if (temp > 30) {
-          app.style.background = '#ff8259';
-        } else if (temp > 20) {
-          app.style.background = '#ffdd59';
-        } else if (temp > 10) {
-          app.style.background = '#8effbb';
-        } else if (temp > 0) {
-          app.style.background = '#bdefe8';
+        if (temp > 25) {
+          app.style.background = colors[3];
+          vector.innerHTML = '<img class="background-vector" src="images/sun.png" height="150px"/>';
+        } else if (temp > 15) {
+          app.style.background = colors[2];
+          vector.innerHTML = '<img class="background-vector" src="images/suncloud.png" height="150px"/>';
+        } else if (temp >= 0) {
+          app.style.background = colors[1];
+          vector.innerHTML = '<img class="background-vector" src="images/clouds.png" height="150px"/>';
         } else {
-          app.style.background = '#dae3f2'
+          app.style.background = colors[0];
+          vector.innerHTML = '<img class="background-vector" src="images/snow.png" height="150px"/>';
         }
       })
       .catch( err => {
