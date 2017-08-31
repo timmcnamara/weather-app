@@ -1,5 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans|Oswald');
-
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans|Open+Sans');
+/*
+font-family: 'Open Sans', sans-serif;
+font-family: 'Josefin Sans', sans-serif;*/
 
 body {
   margin: 0;
@@ -19,7 +21,7 @@ body {
   position: relative;
   align-items: center;
   transition: background-color 0.8s ease;
-  background-color: white;
+  background-color: #f2e9d7;
 }
 
 /*.background {
@@ -29,10 +31,11 @@ body {
 
 
 h1 {
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
   font-size: 5rem;
   color: #051838;
-  padding: 3%;
+  padding-top: 10%;
+  padding-bottom: 5%;
   margin: 0;
 }
 
@@ -54,6 +57,7 @@ footer {
 }
 
 footer p {
+  font-family: 'Josefin Sans', sans-serif;
   color: white;
 }
 
@@ -62,29 +66,30 @@ footer p {
 }
 .city-form {
     display: flex;
-    flex-flow: column;
-    justify-content: center;
-    align-items: center;
+    flex-flow: row;
+    width: 80%;
+    margin-bottom: 5%;
 }
 
 input[type=text]  {
   width: 100%;
-  text-align: center;
-  padding: 10px;
+  text-align: left;
+  background-color: #fffcf7;
+  padding: 5% 5%;
   border: none;
-  margin-bottom: 6%;
-  font-size: 1.5rem;
-  border-bottom: solid 2px #c9c9c9;
+  font-size: 1rem;
+  border-bottom: solid 2px #f7f7f7;
   transition: border 0.3s;
+  border-radius: 5px;
 }
 
-input[type=text]:focus {
-    border-bottom: solid 2px #969696;
+input[type="text"] {
+    outline-color: white;
 }
 
 button {
     background-color: #2D4671;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
     border: none;
     color: white;
     padding: 15px 32px;
@@ -92,18 +97,13 @@ button {
     text-decoration: none;
     font-size: 1.25rem;
     border-radius: 5px;
-    margin-top: 15px;
+    margin-left: 20px;
+    width: 20%
 }
 
 button:hover {
   transition: background-color 0.5s ease;
   background-color: #4D658D;
-}
-
-.text {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 1.25rem;
-  padding: 5%;
 }
 
 .pac-container {
@@ -159,18 +159,12 @@ button:hover {
   color: orange;
 }
 
-.result {
-  display: flex;
-  flex-direction: row;
+.city-weather {
+  font-size: 3em;
+  font-weight: bold;
+  font-family: 'Josefin Sans', sans-serif;
 }
 
-.background-vector {
-  transition: background-color 0.5s ease;
-  background-color: #2D4671;
-  padding: 10%;
-  border-radius: 10%;
-  opacity: 0.5;
-}
 
 @media only screen and (max-width: 600px){
   h1 {

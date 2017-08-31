@@ -27,7 +27,7 @@
       fetch(url)
       .then(response => response.json())
       .then(data => data.results[0].geometry.location)
-    );
+    )
   }
 
   let app = document.querySelector('#app');
@@ -50,25 +50,22 @@
       .then((location) => {
         let temp = Math.floor(location.temperature);
         let time = moment.tz(location.time * 1000, location.timezone).format('h:mm a');
-        let degree = "degrees";
-        let colors = ['#c4d3ed','#b1c8ef', '#a4c4f9', '#9bc0ff'];
+        let colors = ['rgb(229, 238, 255)','rgb(221, 254, 255)', 'rgb(221, 255, 237)', 'rgb(255, 218, 145)', 'rgb(255, 189, 135)'];
         if (temp === 1) {
           degree = "degree";
         }
-        cityWeather.innerText = `It's currently ${temp} ${degree} in ${city} & the time is ${time}`;
+        cityWeather.innerHTML = `${temp} &deg;C  &bull; ${time} <br/>`;
         console.log(temp)
-        if (temp > 25) {
+        if (temp > 30) {
+          app.style.background = colors[4];
+        } else if (temp > 20) {
           app.style.background = colors[3];
-          vector.innerHTML = '<img class="background-vector" src="images/sun.png" height="150px"/>';
-        } else if (temp > 15) {
+        } else if (temp > 10) {
           app.style.background = colors[2];
-          vector.innerHTML = '<img class="background-vector" src="images/suncloud.png" height="150px"/>';
-        } else if (temp >= 0) {
+        } else if (temp > 0) {
           app.style.background = colors[1];
-          vector.innerHTML = '<img class="background-vector" src="images/clouds.png" height="150px"/>';
         } else {
           app.style.background = colors[0];
-          vector.innerHTML = '<img class="background-vector" src="images/snow.png" height="150px"/>';
         }
       })
       .catch( err => {
