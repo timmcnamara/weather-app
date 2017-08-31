@@ -54,7 +54,7 @@
         if (temp === 1) {
           degree = "degree";
         }
-        cityWeather.innerHTML = `${temp} &deg;C  &bull; ${time} <br/>`;
+        cityWeather.innerHTML = `${time} &bull; ${temp} &deg;C `;
         console.log(temp)
         if (temp > 30) {
           app.style.background = colors[4];
