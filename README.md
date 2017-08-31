@@ -8,9 +8,9 @@
 * CSS
 * JavaScript
 * [moment.js](https://momentjs.com/)
-* [Dark Sky API] (https://darksky.net/dev)
-* [Google Maps API] (https://developers.google.com/maps/)
-* [Google Autocomplete] (https://developers.google.com/places/web-service/autocomplete)
+* [Dark Sky API](https://darksky.net/dev)
+* [Google Maps API](https://developers.google.com/maps/)
+* [Google Autocomplete](https://developers.google.com/places/web-service/autocomplete)
 
 
 ## Description
